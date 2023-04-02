@@ -37,12 +37,23 @@
         .formula:hover {
             opacity: 1;
             color: blue;
+            text-shadow: 5px 5px 1px gray;
         }
         .formula-description {
             color: black;
             margin-left: 2cm;
             text-indent: 0;
 
+        }
+        
+        .shadow {
+            text-shadow: 5px 5px 2px gray;
+        }
+        .shadow-blue {
+            text-shadow: -5px 5px 1px blue
+        }
+        .shadow-blur {
+            text-shadow: 0px 0px 5px blue;
         }
         
     </style>
@@ -157,6 +168,10 @@
             Чистые активы = стр.1300 - ЗУ + ДБП
         </div>
 
+        <div class="shadow">Тень</div>
+        <div class="shadow-blue"> Синяя тень слева внизу</div>
+
+        <div class="shadow-blur">Синее размытие</div>
 
 
 
@@ -165,5 +180,8 @@
     <footer>
         &copy; Анастасия Сердюк, ФБИ-11, 2 курс, 2023
     </footer>
+    <div id="wt-sky-root">
+
+    </div>
 </body>
 </html>
