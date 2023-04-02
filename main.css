@@ -5,7 +5,7 @@ body {
     margin: 0px;
 }
 header {
-    background-image: linear-gradient(to right bottom, black, rgb(88, 75, 236), green);
+    background-image: linear-gradient(to right bottom, black, rgb(88, 75, 236), rgb(48, 218, 244));
     color: rgba(215, 140, 234, 0.837);
     padding: 16px;
     font-size: 12pt;
@@ -13,7 +13,7 @@ header {
 }
 
 footer {
-    background-image: linear-gradient(to right bottom, black, rgb(88, 75, 236), green);
+    background-image: linear-gradient(to right bottom, black, rgb(88, 75, 236), rgb(14, 197, 229));
     color: rgba(143, 53, 165, 0.837);
     text-align: right;
     font-style: italic;
@@ -21,6 +21,7 @@ footer {
 }
 A:visited { color: rgb(255, 157, 0);
     background-color: rgb(68, 0, 255);
+    
 
 }
 
@@ -29,10 +30,15 @@ A:hover {
     text-decoration: underline;
     background-color: rgba(163, 14, 158, 0.657);
     font-weight: bold;
+    transition: 300ms;
+    
+    
+    
 
 }
 
 A:active {
     color:aqua;
     background-color: rgb(220, 13, 13);
+    
 }
