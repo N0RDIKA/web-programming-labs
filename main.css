@@ -1,0 +1,38 @@
+body {
+    background-color:rgb(214, 211, 240);
+    color: rgb(29, 41, 67);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px;
+}
+header {
+    background-color: rgba(53, 165, 86, 0.837);
+    color: rgba(143, 53, 165, 0.837);
+    padding: 16px;
+    font-size: 12pt;
+
+}
+
+footer {
+    background-color:  rgba(53, 165, 86, 0.837);
+    color: rgba(143, 53, 165, 0.837);
+    text-align: right;
+    font-style: italic;
+      
+}
+A:visited { color: rgb(255, 157, 0);
+    background-color: rgb(68, 0, 255);
+
+}
+
+A:hover {
+    color: rgb(9, 255, 0);
+    text-decoration: underline;
+    background-color: rgba(163, 14, 158, 0.657);
+    font-weight: bold;
+
+}
+
+A:active {
+    color:aqua;
+    background-color: rgb(220, 13, 13);
+}
