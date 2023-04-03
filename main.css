@@ -3,12 +3,15 @@ body {
     color: rgb(29, 41, 67);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0px;
+
+    
 }
 header {
     background-image: linear-gradient(to right bottom, black, rgb(88, 75, 236), rgb(48, 218, 244));
     color: rgba(215, 140, 234, 0.837);
     padding: 16px;
     font-size: 12pt;
+    
 
 }
 
@@ -19,6 +22,12 @@ footer {
     font-style: italic;
       
 }
+
+a {
+    transition: 3s
+
+}
+
 A:visited { color: rgb(255, 157, 0);
     background-color: rgb(68, 0, 255);
     
@@ -30,7 +39,9 @@ A:hover {
     text-decoration: underline;
     background-color: rgba(163, 14, 158, 0.657);
     font-weight: bold;
-    transition: 300ms;
+    transition: 3s;
+    
+    
     
     
     
