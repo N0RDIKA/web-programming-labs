@@ -14,22 +14,41 @@ header {
     
 
 }
+header:hover {
+
+background-image: linear-gradient(to right bottom, black, rgb(150, 150, 150));
+
+}
+header:active{
+    font-size: 19pt;
+    color: chartreuse;
+}
 
 footer {
     background-image: linear-gradient(to right bottom, black, rgb(88, 75, 236), rgb(14, 197, 229));
-    color: rgba(143, 53, 165, 0.837);
+    color: rgba(184, 81, 210, 0.837);
     text-align: right;
     font-style: italic;
-      
+    
 }
 
+footer:hover {
+    background-image: linear-gradient(to right bottom, black, rgb(150, 150, 150));
+
+    color: chartreuse;
+}
+
+footer:active {
+    font-size: 19pt;
+    
+}
 a {
     transition: 3s
 
 }
 
-A:visited { color: rgb(255, 157, 0);
-    background-color: rgb(68, 0, 255);
+A:visited { color: rgb(204, 0, 255);
+    background-color: rgb(48, 5, 168);
     
 
 }
