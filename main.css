@@ -15,8 +15,7 @@ header {
 
 }
 header:hover {
-
-background-image: linear-gradient(to right bottom, black, rgb(150, 150, 150));
+    background-image: linear-gradient(to right bottom, black, rgb(150, 150, 150));
 
 }
 header:active{
