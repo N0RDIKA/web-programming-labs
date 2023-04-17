@@ -14,6 +14,10 @@ header {
     
 
 }
+
+main {
+    margin: 10px 20px;
+}
 header:hover {
     background-image: linear-gradient(to right bottom, black, rgb(150, 150, 150));
 
