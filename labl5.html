@@ -55,8 +55,50 @@
 
 
         }
+        function change0utput(buttonNum, backColor, textColor) {
+            let output = document.getElementById('output');
+            output.innerHTML = 'Нажата кнопка' + buttonNum;
+            output.style.backgroundColor = backColor;
+            output.style.color = textColor;
+
+        }
+        function showTotal() {
+            let inputA = document.getElementById('numbA');
+            let inputB = document.getElementById('numbB');
+            let inputC = document.getElementById('numbC');
+            let inputD = document.getElementById('numbD');
+
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
+            let c = parseInt(inputC.value);
+            let d = parseInt(inputD.value);
+
+            let result = (a*100 + b*80 + c*150 + d*300);
+
+            let i = document.getElementById('output2')
+            i.innerHTML =  'Общая цена: ' + result
+        }
+        function click(visibility) {
+            let q = document.getElementById('q');
+            q.style.visibility = visibility;
+        }
+    
+        function chpok(something){
+            something.style.opacity=0;
+        }
     </script>
     <style>
+
+        .korzina {
+            
+        
+            width: 100px;
+            height: 60px;
+            font-size: 30px;
+            font-weight: 20px;
+            margin: 15px;
+            margin-left: 0px;
+        }
         .message {
             cursor: pointer;
             background-color: bisque;
@@ -66,6 +108,41 @@
             border-radius: 10px;
             display: inline-block;
         }
+
+        #output {
+            border: 1px solid;
+            width: 300px;
+            height: 40px;
+        }
+
+        .backet {
+            background-color:#c78dc7;
+            border: 1px solid;
+            width: 200px;
+            height: 350px;
+        }
+        #output2 {
+            border: 1px solid #c78dc7;
+            width: 200px;
+            height: 50px;
+            
+        }
+        .cicle {
+            width: 50px; 
+            height: 50px; 
+            border: 2px solid;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 25px;
+            font-weight: bold;
+            line-height: 50px;
+            display: inline-block;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        
+        
     </style>
 </head>
 
@@ -82,6 +159,42 @@
         <div class="message" onclick="showDiff()">Найти разность чисел</div>
         <div class="message" onclick="showMultiply()">Найти произведение чисел</div>
         <div class="message" onclick="showDividing()">Найти деление чисел</div>
+
+        <div>
+            <input tupe="button" value="Кнопка 1" onclick="change0utput(1, 'red','yellow')">
+            <input tupe="button" value="Кнопка 2" onclick="change0utput(2, 'black','lime')">
+            <input tupe="button" value="Кнопка 3" onclick="change0utput(3, 'green','blue')">
+            <input tupe="button" value="Кнопка 4" onclick="change0utput(4, 'white','pink')">
+        </div>
+        <div id="output"></div>
+        <div class="backet">
+        
+
+        
+            <div class="korzina">Корзина товаров</div>
+        
+            <div>Яблоки(100р/шт):</div>
+            <div><input type="number" value="0" id="numbA"></div>
+            <div>Груши(80р/шт)</div>
+            <div><input type="number" value="0" id="numbB"></div>
+            <div>Апельсины(150р/шт)</div>
+            <div><input type="number" value="0" id="numbC"></div>
+            <div>Дыни(300р/шт)</div>
+            <div><input type="number" value="0" id="numbD"></div>
+            <input type="button" value="Рассчитать" onclick=showTotal() >
+            <div id='output2'> Общая цена:  </div>
+    </div>
+    
+    <div class="cicle" style="background-color: #b41818;"onclick="chpok(this)"> 1 </div>
+    <div class="cicle" style="background-color: #fd5c06;" onclick="chpok(this)"> 2 </div>
+    <div class="cicle" style="background-color: #fdfd06;" onclick="chpok(this)"> 3 </div>
+    <div class="cicle" style="background-color: #86fd06;" onclick="chpok(this)"> 4 </div>
+    <div class="cicle" style="background-color: #498560;" onclick="chpok(this)"> 5 </div>
+    <div class="cicle" style="background-color: #15cdcd;" onclick="chpok(this)"> 6 </div>
+    <div class="cicle" style="background-color: #2448d7;" onclick="chpok(this)"> 7 </div>
+    <div class="cicle" style="background-color: #770fef;" onclick="chpok(this)"> 8 </div>
+    <div class="cicle" style="background-color: #fd06c7;" onclick="chpok(this)"> 9 </div>
+    <div class="cicle" style="background-color: #6a0a60;" onclick="chpok(this)"> 10 </div>
     </main>
 
     <footer>
