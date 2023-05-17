@@ -7,6 +7,10 @@
     <title>Сердюк Анастасия Владиславовна. Лабораторная 6</title>
     <link rel="stylesheet" href="main.css">-
     <style>
+        main {
+
+            min-height: 820px;
+        }
         .game {
             width: 300px;
             height: auto;
@@ -48,6 +52,20 @@
             border: 1px solid;
             text-align: center;
             background-color:#24f686;
+            cursor: pointer;
+            left: 0%;
+            position: relative;
+            
+        }
+        .aida {
+            width: 150px;
+            height: 30px;
+            font-size: 10px;
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid;
+            text-align: center;
+            background-color:#f624da;
             cursor: pointer;
         }
     </style>
@@ -126,7 +144,19 @@
             document.getElementById('color-name').innerHTML = 'желтый';
         }
     }
-    function changeShelk(div) {
+    function changeShelk() {
+        let oip = document.getElementsByClassName('block')
+        if(oip[0].style.left == '80%') {
+            oip[0].style.left = '0%';
+            oip[0].style.transition ='3s';
+            oip[0].style.transform = 'rotate(0turn)';
+        }
+
+        else {
+            oip[0].style.left = '80%';
+            oip[0].style.transition ='3s';
+            oip[0].style.transform = 'rotate(4turn)';
+        }
 
 
     }
@@ -139,7 +169,7 @@
         НГТУ, ФБ, Лабораторная работа 6
 
     </header>
-
+    
     <main>
         <div class="game">
             <button onclick="startGame()">
@@ -200,12 +230,14 @@
             Сделайте двойной щелчок, чтобы сменить.
         
         </div>
-        <div class="block" onclick="changeShelk()">
-        Щелкни меня
+        <div class="block" onclick="changeShelk()"> 
+            Щелкни меня
+        </div>
+       <div class="aida" onclick="changeAIDA(this)">Блок</div>
     
-    </div>
     
-</main>
+
+    </main>
 
     <footer>
        &copy; Сердюк Анастасия, ФБИ-11, 2 курс, 2023 
