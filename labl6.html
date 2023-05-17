@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сердюк Анастасия Владиславовна. Лабораторная 6</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main.css">-
     <style>
         .game {
             width: 300px;
@@ -17,6 +17,17 @@
             border: 1px solid;
             text-align: center;
         }
+        .rule {
+            width: 300px;
+            height: auto;
+            font-size: 10px;
+            margin: 10px auto;
+            padding: 20px;
+            border-radius: 50px;
+            border: 1px solid;
+            text-align: left;
+            
+        }
     </style>
     <script>
     let number;
@@ -26,6 +37,7 @@
         let screens = document.getElementsByClassName('game');
         screens[0].style.display = 'none';
         screens[1].style.display = 'block';
+    
         
         }
     function guess() {
@@ -50,6 +62,15 @@
                 document.getElementById('try-count').innerHTML = count;
 
         }
+        if (userNumder > 100) {
+            message.innerHTML = 'число должно быть в диапазоне от 1 до 100!';
+
+        }
+        if (userNumder < 1) {
+            message.innerHTML = 'число должно быть в диапазоне от 1 до 100!';
+
+        }
+        
     }
     function again(params) {
         count = 0;
@@ -57,6 +78,16 @@
         let screens = document.getElementsByClassName('game');
         screens[2].style.display = 'none';
         screens[1].style.display = 'block';
+    }
+    function startRule() {
+        let screens = document.getElementsByClassName('rule');
+        screens[1].style.display = 'block';
+        screens[0].style.display = 'none';
+    }
+    function backRule() {
+        let screens = document.getElementsByClassName('rule');
+        screens[1].style.display = 'none';
+        screens[0].style.display = 'block';
     }
         
         
@@ -101,6 +132,25 @@
                     Сыграть еще раз
                 </button>
             </div>
+        </div>
+        <div class="rule" > 
+            <button onclick="startRule()">
+                Показать правила игры
+            </button>
+        
+        </div>
+        <div class="rule" style="display: none;">
+            <button onclick="backRule()">Скрыть правила игры</button>
+            <ol type="I">
+                <li>сначала нажмите на кнопку "сыграть в игру"</li>
+                <li>потом напишите число</li>
+                <li>число должно быть больше или равно 1 до 100, но не более</li>
+                <li>после ввода числа нажмите кнопку "Угадать"</li>
+                <li>если результат правильный то вы будите победителем, если не угодали "Сыграть еще раз"</li>
+
+        
+            </ol>
+            
 
         </div>
 
