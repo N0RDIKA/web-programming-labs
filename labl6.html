@@ -28,6 +28,16 @@
             text-align: left;
             
         }
+        .color {
+            width: 300px;
+            height: auto;
+            font-size: 10px;
+            margin: 10px auto;
+            padding: 20px;
+            border: 1px solid;
+            text-align: center;
+            background-color:#f6f324
+        }
     </style>
     <script>
     let number;
@@ -88,6 +98,21 @@
         let screens = document.getElementsByClassName('rule');
         screens[1].style.display = 'none';
         screens[0].style.display = 'block';
+    }
+    function changeColor(div) {
+        if(div.style.backgroundColor == 'yellow') {
+            div.style.backgroundColor = 'red';
+            document.getElementById('color-name').innerHTML = 'красный';
+        }
+        else if(div.style.backgroundColor == 'red') {
+            div.style.backgroundColor = 'black';
+            document.getElementById('color-name').innerHTML = 'черный';
+            
+        }
+        else {
+            div.style.backgroundColor = 'yellow';
+            document.getElementById('color-name').innerHTML = 'желтый';
+        }
     }
         
         
@@ -152,6 +177,13 @@
             </ol>
             
 
+        </div>
+        <div class="color" ondblclick="changeColor(this)">
+        
+            Цвет: <span id="color-name">желтый</span><br>
+        
+            Сделайте двойной щелчок, чтобы сменить.
+        
         </div>
 
     </main>
