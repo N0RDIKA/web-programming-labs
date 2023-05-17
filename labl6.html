@@ -30,13 +30,25 @@
         }
         .color {
             width: 300px;
-            height: auto;
+            height: 30px;
             font-size: 10px;
-            margin: 10px auto;
+            margin: 10px;
             padding: 20px;
             border: 1px solid;
             text-align: center;
-            background-color:#f6f324
+            background-color:#f6f324;
+            
+        }
+        .block {
+            width: 150px;
+            height: 30px;
+            font-size: 10px;
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid;
+            text-align: center;
+            background-color:#24f686;
+            cursor: pointer;
         }
     </style>
     <script>
@@ -114,7 +126,10 @@
             document.getElementById('color-name').innerHTML = 'желтый';
         }
     }
-        
+    function changeShelk(div) {
+
+
+    }
         
     </script>
 
@@ -185,8 +200,12 @@
             Сделайте двойной щелчок, чтобы сменить.
         
         </div>
-
-    </main>
+        <div class="block" onclick="changeShelk()">
+        Щелкни меня
+    
+    </div>
+    
+</main>
 
     <footer>
        &copy; Сердюк Анастасия, ФБИ-11, 2 курс, 2023 
