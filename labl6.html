@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сердюк Анастасия Владиславовна. Лабораторная 6</title>
-    <link rel="stylesheet" href="main.css">-
+    <link rel="stylesheet" href="main.css">
     <style>
         main {
 
@@ -40,7 +40,7 @@
             padding: 20px;
             border: 1px solid;
             text-align: center;
-            background-color:#f6f324;
+            background-color:#242bf6;
             
         }
         .block {
@@ -161,6 +161,43 @@
 
     }
         
+    function changeAIDA() {
+        let run = document.getElementById()
+        
+    }
+    function guesss() {
+        let color = document.getElementById('wear-color').value;
+        let type = document.getElementById('wear-type').value;
+        let wear = document.getElementById('wear');
+
+        if(color == 'Красный' && type == 'Футболка') {
+            wear.src = 'red-hj.jpg';
+        }
+        if(color == 'Краcный' && type == 'Поло') {
+            wear.src = 'red pol.jpg';
+        }
+        if(color == 'Красный' && type == 'Майка') {
+            wear.src = 'red maik.jpg';
+        }
+        if(color == 'Белый' && type == 'Футболка') {
+            wear.src = 'white.jpg';
+        }
+        if(color == 'Белый' && type == 'Поло') {
+            wear.src = 'white pol.jpg';
+        }
+        if(color == 'Белый' && type == 'Майка') {
+            wear.src = 'white maaaika.jpg';
+        }
+        if(color == 'Черный' && type == 'Футболка') {
+            wear.src = 'black.jpg';
+        }
+        if(color == 'Черный' && type == 'Поло') {
+            wear.src = 'black pol.jpg';
+        }
+        if(color == 'Черный' && type == 'Майка') 
+            wear.src = 'black mai.jpg';
+        }
+
     </script>
 
 </head>
@@ -169,7 +206,7 @@
         НГТУ, ФБ, Лабораторная работа 6
 
     </header>
-    
+
     <main>
         <div class="game">
             <button onclick="startGame()">
@@ -233,7 +270,31 @@
         <div class="block" onclick="changeShelk()"> 
             Щелкни меня
         </div>
-       <div class="aida" onclick="changeAIDA(this)">Блок</div>
+       <div class="aida" onclick="changeAIDA()">Блок</div>
+    </div>
+       <div>
+        Цвет одежды:
+        <select id="wear-color">
+            <option >Красный</option>
+            <option >Белый</option>
+            <option >Черный</option>
+        </select><br>
+
+        Тип одежды:
+        <select id="wear-type">
+            <option >Футболка</option>
+            <option >Поло</option>
+            <option >Майка</option>
+        </select><br>
+        
+        <button onclick="guesss()">
+            ОК
+        </button><br>
+        
+        <img id="wear">
+        
+       </div>
+
     
     
 
