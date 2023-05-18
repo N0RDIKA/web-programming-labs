@@ -58,7 +58,7 @@
             
         }
         .aida {
-            width: 150px;
+            width: 100px;
             height: 30px;
             font-size: 10px;
             margin: 10px;
@@ -162,9 +162,79 @@
     }
         
     function changeAIDA() {
-        let run = document.getElementById()
-        
-    }
+        let run = document.getElementsByClassName('aida')
+
+        if(run[0].style.width == '100px') {
+            run[0].style.width = '150px';
+            run[0].style.transition ='2s';
+        }
+         
+        else if(run[0].style.width == '150px')  {
+            run[0].style.width = '200px';
+            run[0].style.transition ='2s';
+           }
+        else if(run[0].style.width == '200px') {
+            run[0].style.width = '350px';
+            run[0].style.transition ='2s';
+           }
+        else if(run[0].style.width == '350px')  {
+            run[0].style.width = '400px';
+            run[0].style.transition ='2s';
+           }
+        else if(run[0].style.width == '400px') {
+            run[0].style.width = '450px';
+            run[0].style.transition ='2s';
+           }
+        else if(run[0].style.width == '450px')  {
+            run[0].style.width = '500px';
+            run[0].style.transition ='2s';
+           }
+        else if(run[0].style.width == '500px') {
+            run[0].style.width = '550px';
+            run[0].style.transition ='2s';
+           }
+        else if(run[0].style.width == '550px')  {
+            run[0].style.width = '600px';
+            run[0].style.transition ='2s';
+           }
+        else if(run[0].style.width == '600px') {
+            run[0].style.width = '650px';
+            run[0].style.transition ='2s';
+           }
+        else if(run[0].style.width == '650px')  {
+            run[0].style.width = '700px';
+            run[0].style.transition ='2s';
+           }
+        else if(run[0].style.width == '700px') {
+            run[0].style.width = '750px';
+            run[0].style.transition ='2s';
+           }
+        else if(run[0].style.width == '750px')  {
+            run[0].style.width = '800px';
+            run[0].style.transition ='2s';
+           }
+        else if(run[0].style.width == '800px') {
+            run[0].style.width = '850px';
+            run[0].style.transition ='2s';
+           }
+        else if(run[0].style.width == '850px')  {
+            run[0].style.width = '900px';
+            run[0].style.transition ='2s';
+           }
+        else if(run[0].style.width == '900px') {
+            run[0].style.width = '950px';
+            run[0].style.transition ='2s';
+           }
+        else if(run[0].style.width == '950px')  {
+            run[0].style.width = '1000px';
+            run[0].style.transition ='2s';
+           }
+        else  {
+            run[0].style.width = '100px';
+            run[0].style.transition ='2s';
+           }
+
+}
     function guesss() {
         let color = document.getElementById('wear-color').value;
         let type = document.getElementById('wear-type').value;
@@ -224,7 +294,6 @@
                 <div id="result"></div>
             </div>
             
-
         </div>
         <div class="game" style="display: none;">
             <h1> Поздравляем, вы выиграли !</h1>
@@ -254,8 +323,6 @@
                 <li>число должно быть больше или равно 1 до 100, но не более</li>
                 <li>после ввода числа нажмите кнопку "Угадать"</li>
                 <li>если результат правильный то вы будите победителем, если не угодали "Сыграть еще раз"</li>
-
-        
             </ol>
             
 
