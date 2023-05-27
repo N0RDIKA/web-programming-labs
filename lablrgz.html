@@ -7,40 +7,63 @@
     <title>Сердюк Анастасия Владиславовна. Расчетно-графическая работа</title>
 </head>
 <style>
-    .AVGDE {
-        width: 200px;
+    header button {
+
+        border: 0px solid;
+        padding:10px;
+        width: auto;
         height: auto;
-        margin: 10px auto;
-        padding: 7px;
-        border: 0px ;
-        display: block;
-        left: -700px;
-        overflow-y: auto;
-        overflow-x: hidden;
         position: relative;
-        z-index: 1;
+        z-index: 2;
+        cursor: pointer;
+        display: inline;
+        left: 400px;
+        bottom: 0px;
+        background: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
     }
 
+   
+
+    .AVGDE {
+        width: 200px;
+        margin:  auto;
+        padding: 7px;
+        border: 0px ;
+        display: inline;
+        left: 0px;
+        position: relative;
+        z-index: 1;
+        top: 10px;
+    }
+
+    
 
 </style>
 <body>
 <header>
-    <div class = "AVGDE" width="100%">
-        <img src="discount11.png" height="100">
+    
+    <div class = "AVGDE" >
+        <img src="бспб.jpg" height="50">
     </div>
+    <button onclick="Hrilas()">
+        <div class ="salion">
+            <a  href="labl.html" class="shadow">О нас</a>
+        </div>
+    </button>
 <button onclick="Hrilas()">
     <div class ="salmonela">
         <a  href="labl.html" class="shadow">Основные финансовые показатели</a>
     </div>
+
 </button>
 
 <button onclick="imyprafen()">
-    <div>
+    <div class ="salmonela">
         <a  href="labl.html" class="shadow">Контактные данные</a>
     </div>
 </button>
 <button onclick="miram()">
-    <div>
+    <div class ="salmonela">
         <a  href="labl.html" class="shadow">Видео</a>
     </div>
 </button>
