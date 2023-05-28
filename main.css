@@ -12,11 +12,13 @@ header {
     padding: 16px;
     font-size: 12pt;
     
+    
 
 }
 
 main {
     margin: 10px 20px;
+    
 }
 header:hover {
     background-image: linear-gradient(to right bottom, black, rgb(150, 150, 150));
@@ -32,7 +34,7 @@ footer {
     color: rgba(184, 81, 210, 0.837);
     text-align: right;
     font-style: italic;
-    
+    overflow: auto;
 }
 
 footer:hover {
