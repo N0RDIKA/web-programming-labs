@@ -1,0 +1,54 @@
+body {
+    background-color:rgb(249, 250, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header {background-color:rgb(249, 250, 255);
+    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+header:hover {
+    
+
+}
+header:active{
+    
+}
+
+footer {
+    
+    background-color: rgb(24,31,37);
+    color: rgb(249, 250, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 16px;
+    font-size: 12pt;
+}
+
+footer:hover {
+    
+}
+
+footer:active {
+    
+}
+a {
+    transition: 3s;
+
+}
+
+A:visited { 
+    
+
+}
+
+A:hover {
+    
+    
+
+}
+
+A:active {
+    
+    
+}
