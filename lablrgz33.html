@@ -38,7 +38,63 @@
         background-color: rgb(249, 250, 255);
         
     }
+    main {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        left: 100px;
+        position: relative;
+        right: 100px;
+    }
+    .fr{
+        width: 85px;
+        height:50px ;
+        background: rgb(73, 170, 226);
+        text-align: center;
+
+       
+    }
+    .ki {
+        width: 225px;
+        height:35px ;
+        background: rgb(247, 146, 12);
+        
+    }
+    .kl {
+        width: 260px;
+        height:35px ;
+        background: rgb(247, 146, 12);
+
+    }
+    .oi {
+        width: 185px;
+        height:50px ;
+        background: rgb(73, 170, 226);
+        text-align: center;
+    }
     </style>
+    <script>
+        function finance() {
+    let data = ["01.04.2023", "02.04.2023", "03.04.2023", "04.04.2023", "05.04.2023", "06.04.2023", 
+                "07.04.2023", "08.04.2023", "09.04.2023", "10.04.2023", "11.04.2023", "12.04.2023",
+                "13.04.2023", "14.04.2023", "15.04.2023", "16.04.2023", "17.04.2023", "18.04.2023",
+                "19.04.2023", "20.04.2023", "21.04.2023", "22.04.2023", "23.04.2023", "24.04.2023", 
+                "25.04.2023", "26.04.2023", "27.04.2023", "28.04.2023", "29.04.2023", "30.04.2023"];
+
+    let price = [191.49, 194.49, ];
+
+    let table = document.getElementById("table1");
+        for(let i = 0; i < price.length; i++) {
+            let tr = document.createElement("tr");
+            let td1 = document.createElement("td");
+            let td2 = document.createElement("td");
+            td2.innerHTML = price[i];
+            td1.innerHTML = data[i];
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            table.appendChild(tr);
+    }
+}
+    </script>
+
         
 <body>
     <header>
@@ -70,7 +126,41 @@
     </button>
     </header>
     <main>
-        <div class = "er">Основные финансовые показатели</div>
+        
+        <div class = "er"><h1>Основные финансовые показатели</h1></div>
+        <div><h4>Текущая доходность </h4><h3 class ='fr'>8.91%</h3></div>
+        <div><h4>Доля от прибыли</h4><h3 class='fr'>20%</h3></div>
+        <div><h4>Индекс DSI</h4><h3 class = 'fr'>0.64</h3></div>
+        <div><h4>Прогноз прибыли в след. 12m: 34346.71 млн. руб.</h4></div>
+        <div><h4>Количество акций в обращении: 463.55 млн. шт.</h4></div>
+        <div><h4>Стабильность выплат: 1</h4></div>
+        <div><h4>Стабильность роста: 0.29</h4></div>
+        <div><h2 class = 'kl'>Оценка стоимости</h3></h2></div>
+        <div><h3><u>Капитализация активов на конец апреля</u></h3><h3 class='oi'>76.7 млрд руб</h3></div>
+        <div><h3><u>Общее число акций</u></h3><h3 class='oi'>463.55 млн. шт.</h3></div>
+        <div><h4>цена акции / прибыль</h4><h3 class = 'fr'>P/E 4.16</h3></div>
+        <div><h4>цена акции / выручка</h4><h3 class = 'fr'>P/S 1.31</h3></div>
+        <div><h2 class = 'ki'>Рентабельность</h2></div>
+        
+        <div><h4>доходность капитала</h4><h3 class = 'fr'>ROE 17.41%</h3></div>
+        <div>
+            Представляет собой соотношение капитализации компании
+            и ее чистой прибыли за год (предыдущий отчетный период
+            или последние 4 квартала), Price (Market Capitalization)
+            /Net Income. Фактически речь идет о соотношении цены на
+            акцию к прибыли на одну акцию — Price/EPS — за сколько
+            лет предприятие окупает себя.
+        </div>
+        <div><h4>доходность активов</h4><h3 class = 'fr'>ROA 2.27%</h3></div>
+        <div>
+            Показатель ROA демонстрирует эффективность использования
+            капитала, задействованного в деятельности компании. Суммарные
+            активы в балансе всегда равны суммарным обязательствам, поэтому
+            значение в знаменателе ROA можно интерпретировать и как активы,
+            и как все обязательства и капитал, привлеченные для ведения бизнеса.
+        </div>
+        <div><button onclick = "finance()"><table border="1" id="table1" align="center"></table><br></button></div>
+
     </main>
 </body>
 </html>
