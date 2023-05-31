@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,6 +32,8 @@
         z-index: 1;
         top: 10px;
     }
+    .bb{ 
+        color:rgb(71, 92, 199);}
     .er {
         position: sticky;
         top: 20px;
@@ -70,19 +72,33 @@
         background: rgb(73, 170, 226);
         text-align: center;
     }
+
+    .ui {
+        border: 10px solid;
+        border-bottom: 1px solid grey;
+        border-top: 3px solid grey;
+        background-color: rgb(249, 250, 255);
+        border-color: rgb(249, 250, 255);
+        text-align :center;
+        width: 500px;
+
+    }
+   
     </style>
     <script>
-        function finance() {
-    let data = ["01.04.2023", "02.04.2023", "03.04.2023", "04.04.2023", "05.04.2023", "06.04.2023", 
-                "07.04.2023", "08.04.2023", "09.04.2023", "10.04.2023", "11.04.2023", "12.04.2023",
-                "13.04.2023", "14.04.2023", "15.04.2023", "16.04.2023", "17.04.2023", "18.04.2023",
-                "19.04.2023", "20.04.2023", "21.04.2023", "22.04.2023", "23.04.2023", "24.04.2023", 
-                "25.04.2023", "26.04.2023", "27.04.2023", "28.04.2023", "29.04.2023", "30.04.2023"];
+        function rachet() {
+    let data = ["03.04.2023", "04.04.2023", "05.04.2023", "06.04.2023", "07.04.2023", "10.04.2023", 
+                "11.04.2023", "12.04.2023", "13.04.2023", "14.04.2023", "17.04.2023", "18.04.2023",
+                "19.04.2023", "20.04.2023", "21.04.2023", "24.04.2023", "25.04.2023", "26.04.2023",
+                "27.04.2023", "28.04.2023","29.04.2023"];
 
-    let price = [191.49, 194.49, ];
+    let price = [148.01, 147.84,147.75,147.74,
+    147.72,147.95,146.15,147.39,157.26,156.31,
+    159.70,165.27,164.00,163.17,163.10,165.31,
+    177.10,175.09,176.00,176.51,164.59 ];
 
-    let table = document.getElementById("table1");
-        for(let i = 0; i < price.length; i++) {
+    let table = document.getElementById("rach");
+        for(let i = 0; i <= price ; i++) {
             let tr = document.createElement("tr");
             let td1 = document.createElement("td");
             let td2 = document.createElement("td");
@@ -92,11 +108,36 @@
             tr.appendChild(td2);
             table.appendChild(tr);
     }
+    let max = document.getElementById("max");
+    let min = document.getElementById("min");
+    let summa = 0;
+    max.innerHTML = "Максимальное значение: " + Math.max.apply(0, price);
+    min.innerHTML = "Минимальное значение: " + Math.min.apply(0, price);
+
+    for(i = 0; i < price.length; i++) {
+        summa = summa + price[i];
+    }
+
+    let average = summa / 20;
+    let summakvadrat = 0;
+    
+    for(let i = 0; i < price.length; i++){
+        summakvadrat = summakvadrat + (price[i] - average)**2;
+    }
+
+    let stOtclic = Math.sqrt(summakvadrat / 20);
+    let final = document.getElementById("stOtclic")
+    final.innerHTML = "Среднееквадратическое отклонение: " + stOtclic.toFixed(2);
+    rachet();
 }
+
+
+
+
     </script>
 
         
-<body>
+<body onload="rachet()">
     <header>
     
         <div class = "AVGDE" >
@@ -110,7 +151,7 @@
     
         <button onclick="Hrilas()">
         <div>
-            <a  href="labl.html" class="shadow">Основные финансовые показатели</a>
+            <a class="bb" href="lablrgz33.html" class="shadow">Основные финансовые показатели</a>
         </div>
     </button>
     
@@ -159,8 +200,107 @@
             значение в знаменателе ROA можно интерпретировать и как активы,
             и как все обязательства и капитал, привлеченные для ведения бизнеса.
         </div>
-        <div><button onclick = "finance()"><table border="1" id="table1" align="center"></table><br></button></div>
+        <div><table class="ui" id="rach" style="background-image:url(black.jpg)" >
+            <tr>
+                <th scope="col">Дата</th>
+                <th scope="col">Цены</th>
+            </tr>
+            <tr>
+                <td>03.04.2023</td>
+                <td>148.01</td>
+            </tr>
+            <tr>
+                <td>04.04.2023</td>
+                <td>147.84</td>
+            </tr>
+            <tr>
+                <td>05.04.2023</td>
+                <td>147.84</td>
+            </tr>
+            <tr>
+                <td>06.04.2023</td>
+                <td>147.74</td>
+            </tr>
+            <tr>
+                <td>10.04.2023</td>
+                <td>147.95</td>
+            </tr>
+            <tr>
+                <td>11.04.2023</td>
+                <td>146.15</td>
+            </tr>
+            <tr>
+                <td>12.04.2023</td>
+                <td>147.39</td>
+            </tr>
+            <tr>
+                <td>13.04.2023</td>
+                <td>157.26</td>
+            </tr>
+            <tr>
+                <td>14.04.2023</td>
+                <td>156.31</td>
+            </tr>
+            <tr>
+                <td>17.04.2023</td>
+                <td>159.70</td>
+            </tr>
+            <tr>
+                <td>18.04.2023</td>
+                <td>165.27</td>
+            </tr>
+            <tr>
+                <td>19.04.2023</td>
+                <td>164.00</td>
+            </tr>
+            <tr>
+                <td>20.04.2023</td>
+                <td>163.17</td>
+            </tr>
+            <tr>
+                <td>21.04.2023</td>
+                <td>163.10</td>
+            </tr>
+            <tr>
+                <td>24.04.2023</td>
+                <td>165.31</td>
+            </tr>
+            <tr>
+                <td>25.04.2023</td>
+                <td>177.10</td>
+            </tr>
+            <tr>
+                <td>26.04.2023</td>
+                <td>175.09</td>
+            </tr>
+            <tr>
+                <td>27.04.2023</td>
+                <td>176.00</td>
+            </tr>
+            <tr>
+                <td>28.04.2023</td>
+                <td>176.51</td>
+            </tr>
+            <tr>
+                <td>29.04.2023</td>
+                <td>164.59</td>
+            </tr>
+        </table><br></div>
+        <div style="display: inline-flex;">
+            <div id="stOtclic" style="text-align: center; margin: 20px;"></div>
+            <div id="max" style="text-align: center; margin: 20px;"></div>
+            <div id="min" style="text-align: center; margin: 20px;"></div>
+        </div>
+        
 
     </main>
+    <footer>
+  
+        ПАО «Банк «Санкт-Петербург» использует файлы cookie для персонализации сервисов и удобства пользователей. Cookie содержат обезличенную информацию о прошлых посещениях сайта банка. Вы можете отключить сбор cookie в настройках браузера.
+
+
+        © 1990 – 2023 ПАО «Банк «Санкт-Петербург». Генеральная лицензия Банка России на совершение банковских операций №436 от 31.12.2014.
+    </footer>
+
 </body>
 </html>
