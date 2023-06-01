@@ -8,13 +8,6 @@ header {background-color:rgb(249, 250, 255);
     
 }
 
-header:hover {
-    
-
-}
-header:active{
-    
-}
 
 footer {
     
@@ -25,30 +18,8 @@ footer {
     font-size: 12pt;
 }
 
-footer:hover {
-    
-}
 
-footer:active {
-    
-}
 a {
     transition: 3s;
-
 }
 
-A:visited { 
-    
-
-}
-
-A:hover {
-    
-    
-
-}
-
-A:active {
-    
-    
-}
