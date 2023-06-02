@@ -20,6 +20,7 @@
             blocks.appendChild(block);
         } 
     }
+    
     function showExchange() {
         let exchange = [80.9657, 80.9942, 80.6872, 	80.0555,
         
@@ -75,9 +76,16 @@
                     tel.style.backgroundColor = "rgb(233, 19, 183)";
                 }
                 telo.appendChild(tel);
+            }
         }
-    }
-
+        function tablitsa() {
+            let proizdedenie = document.getElementById("table");
+            for(let i = 13; i <= 33; i++) {
+                let rachet = document.createElement("div");
+                rachet.innerHTML = i + "* 18 = " + i*18;
+                proizdedenie.appendChild(rachet)
+            }
+        }
        
 </script>
 
@@ -98,6 +106,9 @@
         <input type="number" value="5" id="user-number" min="0" max="100" placeholder="введите число кругов">
         <button onclick="GreenPink()">Зеленый/Розовый</button>
         <div id="cryg"></div>
+        <button onclick="tablitsa()">Таблица умножения на 18</button>
+        <div id="table"></div>
+
     </main>
     <footer>
         &copy; Анастасия Сердюк, ФБИ-11, 2 курс, 2023
