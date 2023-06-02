@@ -52,7 +52,31 @@
             }
 
         } 
-       
+        function GreenPink(){
+            let telo = document.getElementById('cryg');
+            let input = document.getElementById('user-number');
+            let userNumber = parseInt(input.value);
+            for(let i = userNumber; i >= 1; i--) {
+                let tel = document.createElement('div');
+                tel.style.borderRadius = '50%';
+                tel.style.border = '2px';
+                tel.style.display = 'block';
+                tel.style.width = '80px';
+                tel.style.height = '80px';
+                tel.style.position = 'relative';
+                tel.style.top = '20px';
+                tel.style.textAlign = 'center';
+                
+                tel.innerHTML = i;
+                if(i % 2 == 0) {
+                    tel.style.backgroundColor = "rgb(7, 229, 103)";
+                }
+                else {
+                    tel.style.backgroundColor = "rgb(233, 19, 183)";
+                }
+                telo.appendChild(tel);
+        }
+    }
 
        
 </script>
@@ -70,6 +94,10 @@
         <div id="detail"></div>
         <button onclick="addTransparentBlocks()">Создать полупрозрачные блоки</button>
         <div id="tnrasparent-blocks"></div>
+
+        <input type="number" value="5" id="user-number" min="0" max="100" placeholder="введите число кругов">
+        <button onclick="GreenPink()">Зеленый/Розовый</button>
+        <div id="cryg"></div>
     </main>
     <footer>
         &copy; Анастасия Сердюк, ФБИ-11, 2 курс, 2023
