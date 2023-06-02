@@ -40,8 +40,20 @@
             }
             let average = sum / exchange.length;
             document.getElementById('detail').innerHTML = 'Среднее значение: ' + average;
-        
-}
+        }
+        function addTransparentBlocks() {
+            let blok = document.getElementById('tnrasparent-blocks')
+            for (let i = 1; i<=10; i++) {
+                let blo = document.createElement('div');
+                blo.innerHTML = 'Блок ' + (i);
+                blo.style.opacity = i*0.1;
+                blok.appendChild(blo);
+
+            }
+
+        } 
+       
+
        
 </script>
 
@@ -56,6 +68,8 @@
         <button onclick="showExchange()">Курс доллара</button>
         <table border="1" id="dollar-exchange"></table>
         <div id="detail"></div>
+        <button onclick="addTransparentBlocks()">Создать полупрозрачные блоки</button>
+        <div id="tnrasparent-blocks"></div>
     </main>
     <footer>
         &copy; Анастасия Сердюк, ФБИ-11, 2 курс, 2023
