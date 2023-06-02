@@ -18,18 +18,44 @@
             
                
             blocks.appendChild(block);
-        }
-        }
+        } 
+    }
+    function showExchange() {
+        let exchange = [80.9657, 80.9942, 80.6872, 	80.0555,
+        
+        79.9667, 	79.9841, 	79.9669, 	80.1665 ,
+        
+        79.9379, 79.9093];
+        let table = document.getElementById('dollar-exchange');
+            for(let i = 0; i < exchange.length; i++) {
+                let tr = document.createElement('tr');
+                let td = document.createElement('td');
+                td.innerHTML = exchange[i];
+                tr.appendChild(td);
+                table.appendChild(tr);
+            }
+            let sum = 0;
+            for(let i = 0; i < exchange.length; i++) {
+                sum = sum + exchange[i];
+            }
+            let average = sum / exchange.length;
+            document.getElementById('detail').innerHTML = 'Среднее значение: ' + average;
+        
+}
+       
 </script>
 
 <body>
     <header>
-        НГТУ, ФБ, Лабораторная работа 5
+        НГТУ, ФБ, Лабораторная работа 7
     </header>
 
     <main>
         <button onclick="addBlocks()">Создать блоки</button>
         <div id="blocks"></div>
+        <button onclick="showExchange()">Курс доллара</button>
+        <table border="1" id="dollar-exchange"></table>
+        <div id="detail"></div>
     </main>
     <footer>
         &copy; Анастасия Сердюк, ФБИ-11, 2 курс, 2023
