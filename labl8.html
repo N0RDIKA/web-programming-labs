@@ -14,10 +14,14 @@
         margin: 10px;
         padding: 10px;
     }
+    .chas {
+        text-align: right;
+    }
 </style>
 <body onload="showData()">
     <header>
-        НГТУ, ФБ, Лабораторная работа 5
+        НГТУ, ФБ, Лабораторная работа 8
+        <div class = 'chas' id="time">00:00:00</div>
     </header>
 
     <main>
@@ -28,6 +32,15 @@
         <div id="current-date5"></div>
         <div id="current-date6"></div>
         <div id="current-date7"></div>
+        <div>
+            <label>Дата рождения:<input type="date"></label>
+        </div>
+        <div>
+            <button onclick="showDaysCount()">Показать число дней</button>
+        </div>
+        <div id="HH"></div>
+        <div>
+            <button onclick="agains()">Подсчитать заново</button></div>
     </main>
     <footer>
         &copy; Анастасия Сердюк, ФБИ-11, 2 курс, 2023
